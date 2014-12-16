@@ -21,3 +21,8 @@
 
 
 // var moviesSearchUrl ="http://api.themoviedb.org/3/" + process.env.moviedata;
+
+
+// <% if(user) { %>
+// Hello, <b><%= typeof user.name === 'string' ? user.name : 'Unknown' %></b>.
+// <% } %>

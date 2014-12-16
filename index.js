@@ -22,62 +22,23 @@ expressControllers
 .setDirectory(__dirname + '/controllers')
 .bind(app);
 
+var moods = {
+	"happy": 35,
+	"adventure": 12, 
+	"drama": 18,
+	"suspense": 10748,
+	"romance": 10749,
+	"family": 10751,
+	"action": 28,
+	"learning": 99
+}
+
+
 app.use(function(req,res,next){
 	req.getUser=function(){
 		return req.session.user || false;
 	}
 	next();
-});
-
-//Home page with signup and login buttons
-app.get('/',function(req,res){
-	var user = req.getUser();
-	res.render('index', {user:user});
-});
-
-//Signup page
-app.get("/signup", function(req, res){
-	res.render("signup");
-});
-//Signup page posting to user table
-app.post("/signup",function(req,res){
-    //do sign up here (add user to database)
-    db.user.findOrCreate({
-    	where: {email: req.body.email}, 
-    	defaults:{email:req.body.email,password:req.body.password,name:req.body.name}
-    }).spread(function(user, created){
-    	res.redirect("/mood");
-    }).catch(function(error){
-    	res.send(error)
-    	res.redirect('signup')
-    })
-});
-
-//Login page(finish login portion, can't get information from db)
-app.get("/login", function(req, res){
-	res.render("login")
-})
-
-app.post("/login", function(req, res){
-	db.user.find({where:{email:req.body.email}}).then(function(userObj){
-		if(userObj){
-			bcrypt.compare(req.body.password,userObj.password, function(err, match){
-				if (match === true){
-					// res.send("correct password")
-					req.session.user = {
-						id: userObj.id,
-						email: userObj.email,
-						name: userObj.name
-					};
-					res.redirect("/mood");
-				}else{
-					res.send("invalid password")
-				}
-			});
-		}else{
-			res.send("Unknown user");
-		}
-	})
 });
 
 
@@ -88,7 +49,9 @@ app.get("/mood", function(req, res){
 
 //Happy
 app.get("/happy", function(req, res){
-	var moviesSearchUrl ="http://api.themoviedb.org/3/genre/movie/list?api_key=" + process.env.moviedata;
+	//List of genres
+	//var moviesSearchUrl ="http://api.themoviedb.org/3/genre/movie/list?api_key=" + process.env.moviedata;
+	var moviesSearchUrl ="http://api.themoviedb.org/3/genre/35/movies?api_key=" + process.env.moviedata;
 	request(moviesSearchUrl, function(error, response, body){
 		var info = JSON.parse(body);
 		res.send(info)
@@ -96,25 +59,5 @@ app.get("/happy", function(req, res){
 	// res.render("happy")
 })
 
-//Adventure
-app.get("/adventure", function(req,res){
-	res.render("adventure")
-})
-//Drama
-app.get("/drama", function(req, res){
-	res.render("drama")
-})
-//Suspense
-app.get("/suspense", function(req, res){
-	res.render("suspense")
-})
-//Romantic
-app.get("/romantic", function(req, res){
-	res.render("romantic")
-})
-//Family fun
-app.get("/family", function(req,res){
-	res.render("family")
-})
 
  app.listen(3000);
