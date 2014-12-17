@@ -17,7 +17,7 @@ module.exports = {
 							email: userObj.email,
 							name: userObj.name
 						};
-						res.redirect("/mood");
+						res.redirect("/movie/mood");
 					}else{
 						res.send("invalid password")
 					}
@@ -36,7 +36,7 @@ module.exports = {
 	    	where: {email: req.body.email}, 
 	    	defaults:{email:req.body.email,password:req.body.password,name:req.body.name}
 	    }).spread(function(user, created){
-	    	res.redirect("/mood");
+	    	res.redirect("/movie/mood");
 	    }).catch(function(error){
 	    	res.send(error)
 	    	res.redirect('signup')

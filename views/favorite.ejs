@@ -1,0 +1,14 @@
+<% include header %>
+
+<% list.forEach(function(item){ %>
+<div class="favortieItem">
+<ul>
+	<li><a href="<%=item.movieId%>"><%=item.title%></a></li>
+</ul>
+<div class="deleteButton">
+	<a href="#" type="submit" class="delete" data-id="<%= item.id %>">Delete</a>
+</div>
+</div>
+<% }) %>
+
+<% include footer %>

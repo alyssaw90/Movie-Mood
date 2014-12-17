@@ -4,11 +4,8 @@ var request = require("request");
 var bodyParser = require("body-parser");
 var bcrypt = require('bcrypt');
 var db = require("./models/index.js");
-var models = require ("./models");
 var expressControllers = require('express-controller');
 var app = express();
-
-
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
@@ -33,7 +30,6 @@ var moods = {
 	"learning": 99
 }
 
-
 app.use(function(req,res,next){
 	req.getUser=function(){
 		return req.session.user || false;
@@ -41,23 +37,31 @@ app.use(function(req,res,next){
 	next();
 });
 
+app.get("/info/:id", function(req, res){
+	var id = req.params.id
+	var url = "http://api.themoviedb.org/3/movie/"+id+"?api_key=" + process.env.moviedata; 
+	request(url, function(error, response, body){
+		// console.log(response.statusCode)
+		if (response.statusCode == 200) {
+			var info = JSON.parse(body);
+			// res.send(body)
+			res.render("movieinfo", info)
+		} else {
+			console.log(error);
+		}
+	})
+})
 
-//Mood page
-app.get("/mood", function(req, res){
-	res.render("mood");
+app.delete("/favorite/:id", function(req, res){
+	db.favorite.find({where:{id: req.params.id}}).then(function(deleteCount){
+		deleteCount.destroy().success(function(){
+			res.send({deleted: deleteCount});
+		})
+	})
 });
 
-//Happy
-app.get("/happy", function(req, res){
-	//List of genres
-	//var moviesSearchUrl ="http://api.themoviedb.org/3/genre/movie/list?api_key=" + process.env.moviedata;
-	var moviesSearchUrl ="http://api.themoviedb.org/3/genre/35/movies?api_key=" + process.env.moviedata;
-	request(moviesSearchUrl, function(error, response, body){
-		var info = JSON.parse(body);
-		res.send(info)
-	})
-	// res.render("happy")
-})
+
 
 
  app.listen(3000);
+
