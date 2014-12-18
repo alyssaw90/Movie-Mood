@@ -1,11 +1,14 @@
 <% include partials/header.ejs %>
 
+<div class="container text-center">
+<h2>Adventureous</h2>
 <% data.map(function(info){%>
-	<li><a href="/info/<%=info.id%>"><img src="http://image.tmdb.org/t/p/w500/<%= info.poster_path%>"></a></li>
+	<li class="posters"><a href="/info/<%=info.id%>"><img src="http://image.tmdb.org/t/p/w500/<%= info.poster_path%>"></a></li>
 
 <% }) %>
 
 <a href="" class="btn btn-primary"><span class="glyphicon glyphicon-backward" aria-hidden="true"></span></a>
 <a href="/movie/adventure?page=<%= parseInt(page) + 1 %>" class="btn btn-primary"><span class="glyphicon glyphicon-forward" aria-hidden="true"></span></a>
+</div>
 
 <% include partials/footer.ejs %>

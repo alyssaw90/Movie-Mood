@@ -21,3 +21,7 @@ h1 {
 .box {
 	font-family: 'Roboto', sans-serif;
 }
+
+.posters {
+	display: inline-block;
+}

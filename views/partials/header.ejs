@@ -3,8 +3,8 @@
 <head>
 	<title>Moodflix</title>
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
-	<link href="http://bootswatch.com/superhero/bootstrap.min.css" rel="stylesheet">
-	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:400,700' rel='stylesheet' type='text/css'>
+	<link href="//bootswatch.com/superhero/bootstrap.min.css" rel="stylesheet">
+	<link href='//fonts.googleapis.com/css?family=Roboto+Slab|Roboto:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="/style.css">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
@@ -15,8 +15,9 @@
 		<div class="text-center">
 			<h1>Moodflix</h1>
 		</div>
-		<div class="container navbar-left">
-			<a href="#" class="dropdown-toggle btn btn-primary" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+		<div class="container">
+		<div class="navbar-left">
+			<a href="#" class="dropdown-toggle btn btn-primary" data-toggle="dropdown" role="button" aria-expanded="false">Moods <span class="caret"></span></a>
 			<ul class="dropdown-menu" role="menu">
 				<li><a href="/movie/mood">All Moods</a></li>
 				<li><a href="/movie/happy">Happy</a></li>
@@ -28,7 +29,6 @@
 			</ul>
 			<a href="/favorite/list" class="watchlist btn btn-primary"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>Favorites</a>
 		</div>
-		<div class="container">
 			<div class="navbar-right">
 			<% if(user) { %>
 				Hello, <b><%= typeof user.name === 'string' ? user.name : 'Unknown' %></b>.
