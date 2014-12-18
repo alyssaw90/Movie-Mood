@@ -40,6 +40,12 @@ app.use(function(req,res,next){
 	next();
 });
 
+app.get("*", function(req, res, next){
+	var alerts = req.flash();
+	res.locals.alerts = alerts;
+	next();
+});
+
 app.get("/info/:id", function(req, res){
 	var user = req.getUser();
 	var id = req.params.id;
@@ -69,5 +75,5 @@ app.delete("/favorite/:id", function(req, res){
 
 
 
- app.listen(3000);
+ app.listen(process.env.PORT || 3000);
 

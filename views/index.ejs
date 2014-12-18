@@ -1,27 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Moodflix</title>
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-	<script src="/script.js"></script>
+<% include partials/headerplain.ejs%>
+	
+<div class="col-md-6">
+	<a href="/auth/signup" class="btn btn-primary btn-lg">Signup</a>
+	<a href="/auth/login" class="btn btn-primary btn-lg">Login</a>
+</div>
+<div class="panel panel-default col-md-6">
+	<div class="panel-body text-center">
+		Moodflix is a sight where you can find what you want to watch based on how you are feeling or what you are doing. You can also save a movie to watch later!
+	</div>
+</div>
 
-</head>
-<body>
-	<nav class="navbar navbar-default" role="navigation">
-		<h1 class="text-center">Moodflix</h1>
-	</nav>
-	<div class="container">
-		<div class="col-md-6">
-			<a href="/auth/signup" class="btn btn-primary">Signup</a>
-			<a href="/auth/login" class="btn btn-primary">Login</a>
-		</div>
-		<div class="panel panel-default col-md-6">
-			<div class="panel-body">
-				Moodflix is a sight where you can find what you want to watch based on how you are feeling or what you are doing. You can also save a movie to watch later!
-			</div>
-			</div
-		</div>
-	</body>
-	</html>
+<% include partials/footerplain.ejs%>

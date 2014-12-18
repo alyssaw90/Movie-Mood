@@ -1,19 +1,30 @@
-<% include header %>
+<% include partials/header.ejs %>
 
 <br><br>
 <div class="container">
-<div class="row">
-	<a href="/movie/happy" class="btn btn-primary col-md-4">Happy</a>
-	<a href="/movie/drama" class="btn btn-primary col-md-4">Dramatic</a>
-	<a href="/movie/adventure" class="btn btn-primary col-md-4">Adventerous</a>
-</div>
-<br><br>
-<div class="row">
-	<a href="/movie/suspense" class="btn btn-primary col-md-4">Suspense</a>
-	<a href="/movie/romance" class="btn btn-primary col-md-4">Romantic</a>
-	<a href="/movie/family" class="btn btn-primary col-md-4">Family</a>
+	<div class="row">
+		<div class="col-md-4">
+			<a href="/movie/happy" class="box btn btn-primary">Happy</a>
+		</div>
+		<div class="col-md-4">
+			<a href="/movie/drama" class="box btn btn-primary">Dramatic</a>
+		</div>
+		<div class="col-md-4">
+			<a href="/movie/adventure" class="box btn btn-primary">Adventerous</a>
+		</div>
+	</div>
+	<br><br>
+	<div class="row">
+		<div class="col-md-4">
+			<a href="/movie/suspense" class="box btn btn-primary">Suspense</a>
+		</div>
+		<div class="col-md-4">
+			<a href="/movie/romance" class="box btn btn-primary">Romantic</a>
+		</div>
+		<div class="col-md-4">
+			<a href="/movie/family" class="box btn btn-primary">Family</a>
+		</div>
+	</div>
 </div>
 
-</div>
-
-<% include footer %>
+<% include partials/footer.ejs %>

@@ -1,7 +1,7 @@
-<% include header %>
+<% include partials/header.ejs %>
 
 <% list.forEach(function(item){ %>
-<div class="favortieItem">
+<div class="favoriteItem">
 <ul>
 	<li><a href="/info/<%=item.movieId%>"><%=item.title%></a></li>
 </ul>
@@ -11,4 +11,4 @@
 </div>
 <% }) %>
 
-<% include footer %>
+<% include partials/footer.ejs %>

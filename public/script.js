@@ -8,8 +8,7 @@ $(function(){
 
 		$.post("/favorite/list", {
 			title: thisAddButton.data("title"),
-			movieId: thisAddButton.data("movieid"),
-			userId: thisAddButton.data("userid")
+			movieId: thisAddButton.data("movieid")
 		}, function(data) {
 			alert("Movie has been added!");
 			theButton.closest(".addButton").fadeOut("slow", function(){
