@@ -1,7 +1,7 @@
 <% include partials/header.ejs %>
 
 <% data.map(function(info){%>
-	<li><a href="/info/<%=info.id%>"><%= info.title%></a><img src="<%= info.poster_path%>"></li>
+	<li><a href="/info/<%=info.id%>"><img src="http://image.tmdb.org/t/p/w500/<%= info.poster_path%>"></a></li>
 
 <% }) %>
 
