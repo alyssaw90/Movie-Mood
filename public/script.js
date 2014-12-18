@@ -1,14 +1,15 @@
 $(function(){
 	//ADD BUTTON ON MOVIE INFO PAGE
 	$(".addButton").on("click", function(event){
-		alert("Hello")
+		// alert("Hello")
 		var theButton = $(this);
 		event.preventDefault();
 		var thisAddButton = $(this);
 
 		$.post("/favorite/list", {
 			title: thisAddButton.data("title"),
-			movieId: thisAddButton.data("movieId")
+			movieId: thisAddButton.data("movieid"),
+			userId: thisAddButton.data("userid")
 		}, function(data) {
 			alert("Movie has been added!");
 			theButton.closest(".addButton").fadeOut("slow", function(){

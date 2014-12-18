@@ -2,11 +2,12 @@
 
 <h1>Movie Information</h1>
 
-<li><%= title%></li>
-<li><%= overview%></li>
-<li><img src="http://image.tmdb.org/t/p/w500/<%= poster_path%>"></li>
-<li><a href="http://www.themoviedb.org/movie/<%=id%>">Where to watch this at?</a></li>
+<li><%= info.title%></li>
+<li><%= info.overview%></li>
+<li><img src="http://image.tmdb.org/t/p/w500/<%= info.poster_path%>"></li>
+<li><a href="http://www.themoviedb.org/movie/<%=info.id%>">Where to watch this at?</a></li>
 
-<button class="addButton btn btn-primary" type="submit" data-title="<%=title%>" data-movieId="<%=id%>">Save for later</button>
+
+<button class="addButton btn btn-primary" type="submit" data-title="<%=info.title%>" data-movieId="<%=info.id%>" data-userId="<%=user.id%>"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span></button>
 
 <% include footer %>

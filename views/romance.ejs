@@ -1,11 +1,9 @@
 <% include header %>
-
 <% data.map(function(info){%>
 	<li><a href="/info/<%=info.id%>"><%= info.title%></a><img src="<%= info.poster_path%>"></li>
-
 <% }) %>
 
 <a href="" class="btn btn-primary"><span class="glyphicon glyphicon-backward" aria-hidden="true"></span></a>
-<a href="/movie/drama?page=<%= parseInt(page) + 1 %>" class="btn btn-primary"><span class="glyphicon glyphicon-forward" aria-hidden="true"></span></a>
+<a href="/movie/romance?page=<%= parseInt(page) + 1 %>" class="btn btn-primary"><span class="glyphicon glyphicon-forward" aria-hidden="true"></span></a>
 
 <% include footer %>
