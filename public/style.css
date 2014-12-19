@@ -25,3 +25,19 @@ h1 {
 .posters {
 	display: inline-block;
 }
+
+.username{
+	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+}
+
+.infoTitle,
+.infoLink,
+.infoPoster {
+	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+}
+
+.favoriteListItem {
+	list-style: none;
+}

@@ -45,8 +45,11 @@ module.exports = {
 					email: user.email,
 					name: user.name
 				};
-			}
 			res.redirect("/movie/mood");
+			}else{
+				req.flash("danger", "Enter valid password")
+			}
+			
 		}).catch(function(error){
 			res.flash("danger", "ERROR");
 			res.redirect('signup')
