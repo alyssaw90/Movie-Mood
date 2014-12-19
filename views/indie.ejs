@@ -1,7 +1,7 @@
 <% include partials/header.ejs %>
 
 <div class="container text-center">
-	<h2><a href="<%= parseInt(page) - 1 %>" class="btn btn-primary"><span class="glyphicon glyphicon-backward" aria-hidden="true"></span></a> Indie <a href="/movie/indie?page=<%= parseInt(page) + 1 %>" class="btn btn-primary"><span class="glyphicon glyphicon-forward" aria-hidden="true"></span></a></h2>
+	<h2><a href="/movie/indie?page=<%= parseInt(page) - 1 %>" class="btn btn-primary"><span class="glyphicon glyphicon-backward" aria-hidden="true"></span></a> Indie <a href="/movie/indie?page=<%= parseInt(page) + 1 %>" class="btn btn-primary"><span class="glyphicon glyphicon-forward" aria-hidden="true"></span></a></h2>
 	<hr>
 	<% data.map(function(info){%>
 	<li class="posters"><a href="/info/<%=info.id%>"><img src="http://image.tmdb.org/t/p/w500/<%= info.poster_path%>"></a></li>
@@ -9,7 +9,7 @@
 </div>
 <br><br>
 <div class="container text-center">
-	<a href="<%= parseInt(page) - 1 %>" class="btn btn-primary"><span class="glyphicon glyphicon-backward" aria-hidden="true"></span></a>
+	<a href="/movie/indie?page=<%= parseInt(page) - 1 %>" class="btn btn-primary"><span class="glyphicon glyphicon-backward" aria-hidden="true"></span></a>
 	<a href="/movie/indie?page=<%= parseInt(page) + 1 %>" class="btn btn-primary"><span class="glyphicon glyphicon-forward" aria-hidden="true"></span></a>
 </div>
 
