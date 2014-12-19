@@ -1,6 +1,11 @@
 h1 {
 	font-family: 'Roboto Slab', serif;
 	font-weight: 700;
+	color: white;
+}
+
+h2 {
+	font-family: 'Roboto', sans-serif; 
 }
 
 .panel-body {
@@ -18,8 +23,72 @@ h1 {
 	font-family: 'Roboto', sans-serif;
 }
 
+body {
+	background-color: #95a5a6;
+}
+
 .box {
 	font-family: 'Roboto', sans-serif;
+}
+
+nav {
+	background-image: url(movies.jpg);
+	background-size: contain;
+}
+
+.watchlist {
+	background: #c0392b;
+	border-color: #c0392b;
+}
+
+.watchlist:hover {
+  background: #ea6153;
+  text-decoration: none;
+}
+
+#romance, 
+#happy, 
+#adventure,
+#indie, 
+#family,
+#drama {
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  border-color: #c0392b;
+  font-size: 20px;
+  background: #c0392b;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+#romance:hover {
+  background: #ea6153;
+  text-decoration: none;
+}
+
+#happy:hover {
+  background: #ea6153;
+  text-decoration: none;
+}
+
+#adventure:hover {
+  background: #ea6153;
+  text-decoration: none;
+}
+
+#indie:hover {
+  background: #ea6153;
+  text-decoration: none;
+}
+
+#family:hover {
+  background: #ea6153;
+  text-decoration: none;
+}
+
+#drama:hover {
+  background: #ea6153;
+  text-decoration: none;
 }
 
 .posters {
@@ -29,6 +98,7 @@ h1 {
 .username{
 	font-family: 'Roboto', sans-serif;
 	font-size: 15px;
+	color: white;
 }
 
 .infoTitle,
@@ -38,6 +108,22 @@ h1 {
 	font-size: 15px;
 }
 
+.infoLink {
+	font-size: 20px;
+}
+
 .favoriteListItem {
 	list-style: none;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+}
+
+#favoriteButton {
+	background-color: #c0392b;
+	border-color: #c0392b;
+}
+
+#favoriteButton:hover {
+  background: #ea6153;
+  text-decoration: none;
 }
