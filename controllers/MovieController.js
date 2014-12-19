@@ -7,7 +7,7 @@ var mood = {
 	"romance": 10749,
 	"family": 10751
 }
-
+// Movie mood pages
 module.exports = {
 	get_mood:function(req, res){
 		var user = req.getUser()

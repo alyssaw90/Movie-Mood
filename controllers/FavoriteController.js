@@ -1,6 +1,7 @@
 var db = require("../models/index.js");
 
 module.exports = {
+	//Favorite list
 	get_list:function(req, res){
 		var user = req.getUser()
 		var added = req.query.added || false;

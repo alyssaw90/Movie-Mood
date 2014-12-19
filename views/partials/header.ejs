@@ -15,7 +15,7 @@
 			<h1>Moodflix</h1>
 		</div>
 		<div class="navbar-left">
-			<a href="#" class="dropdown-toggle btn btn-primary" data-toggle="dropdown" role="button" aria-expanded="false">Moods <span class="caret"></span></a>
+			<a href="#" class="moodDropdown dropdown-toggle btn btn-primary" data-toggle="dropdown" role="button" aria-expanded="false">Moods <span class="caret"></span></a>
 			<ul class="dropdown-menu" role="menu">
 				<li><a href="/movie/mood">All Moods</a></li>
 				<li><a href="/movie/happy">Happy</a></li>
@@ -27,12 +27,12 @@
 			</ul>
 			<a href="/favorite/list" class="watchlist btn btn-primary"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>Favorites</a>
 		</div>
-			<div class="navbar-right">
+		<div class="navbar-right">
 			<% if(user) { %>
-				<b class="username"> Hello, <%= typeof user.name === 'string' ? user.name : 'Unknown' %>!</b>
+			<b class="username"> Hello, <%= typeof user.name === 'string' ? user.name : 'Unknown' %>!</b>
 			<% } %>
-			<a href="/auth/logout" class="btn btn-primary">Logout</a>
-			</div>
+			<a href="/auth/logout" class="logoutButton btn btn-primary">Logout</a>
+		</div>
 	</nav>
 
 

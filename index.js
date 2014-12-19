@@ -33,6 +33,7 @@ var moods = {
 	"family": 10751
 }
 
+//Session middleware
 app.use(function(req,res,next){
 	req.getUser=function(){
 		return req.session.user || false;
@@ -40,12 +41,14 @@ app.use(function(req,res,next){
 	next();
 });
 
+//Flash notifications
 app.get("*", function(req, res, next){
 	var alerts = req.flash();
 	res.locals.alerts = alerts;
 	next();
 });
 
+//Getting movie information
 app.get("/info/:id", function(req, res){
 	var user = req.getUser();
 	var id = req.params.id;
@@ -63,6 +66,7 @@ app.get("/info/:id", function(req, res){
 	})
 })
 
+//Delete button
 app.delete("/favorite/:id", function(req, res){
 	var user = req.getUser();
 	db.favorite.find({where:{id: req.params.id}}).then(function(deleteCount){

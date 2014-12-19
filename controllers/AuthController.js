@@ -2,6 +2,7 @@ var bcrypt = require('bcrypt');
 var db = require("../models/index.js");
 
 module.exports = {
+	//Login
 	get_login:function(req, res){
 		var user = req.getUser()
 		res.render("login")
@@ -29,6 +30,7 @@ module.exports = {
 			}
 		})
 	},
+	//Signup
 	get_signup:function(req, res){
 		var user = req.getUser()
 		res.render("signup");
@@ -45,7 +47,7 @@ module.exports = {
 					email: user.email,
 					name: user.name
 				};
-			res.redirect("/movie/mood");
+				res.redirect("/movie/mood");
 			}else{
 				req.flash("danger", "Enter valid password")
 			}
@@ -55,6 +57,7 @@ module.exports = {
 			res.redirect('signup')
 		})
 	},
+	//Logout
 	get_logout:function(req,res){
 		delete req.session.user;
 		req.flash("info", "You have been logged out.");

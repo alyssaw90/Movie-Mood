@@ -1,3 +1,4 @@
+/* Headers */
 h1 {
 	font-family: 'Roboto Slab', serif;
 	font-weight: 700;
@@ -8,6 +9,7 @@ h2 {
 	font-family: 'Roboto', sans-serif; 
 }
 
+/* Signup and login page */
 .panel-body {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
@@ -27,16 +29,15 @@ body {
 	background-color: #95a5a6;
 }
 
-.box {
-	font-family: 'Roboto', sans-serif;
-}
 
+/* Navigation bar styling */
 nav {
 	background-image: url(movies.jpg);
 	background-size: contain;
 }
 
 .watchlist {
+	font-family: 'Roboto', sans-serif;
 	background: #c0392b;
 	border-color: #c0392b;
 }
@@ -46,6 +47,21 @@ nav {
   text-decoration: none;
 }
 
+.moodDropdown {
+	font-family: 'Roboto', sans-serif;
+}
+
+.logoutButton {
+	font-family: 'Roboto', sans-serif;
+}
+
+.username{
+	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+	color: white;
+}
+
+/* Mood buttons */
 #romance, 
 #happy, 
 #adventure,
@@ -95,12 +111,7 @@ nav {
 	display: inline-block;
 }
 
-.username{
-	font-family: 'Roboto', sans-serif;
-	font-size: 15px;
-	color: white;
-}
-
+/* Movie information page */
 .infoTitle,
 .infoLink,
 .infoPoster {
