@@ -138,3 +138,14 @@ nav {
   background: #ea6153;
   text-decoration: none;
 }
+
+#contactPicture{
+	height: 200px;
+	width: 200px;
+	border-radius: 50% 50%;
+}
+
+p {
+	font-family: 'Roboto', sans-serif; 
+	font-size: 20px;
+}
