@@ -59,8 +59,12 @@ module.exports = {
 			}
 			
 		}).catch(function(error){
-			req.flash("danger", "ERROR");
-			res.redirect('signup')
+			if(error && Array.isArray(error.errors)){
+				error.errors.forEach(function(errorItem){
+					req.flash('danger', errorItem.message)
+					res.redirect('signup')
+				})
+			}
 		})
 	},
 	//Logout
