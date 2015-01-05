@@ -48,6 +48,12 @@ app.get("*", function(req, res, next){
 	next();
 });
 
+//404 page handling
+app.use(function(res, res, next){
+	res.send(404, "Sorry can't find that!");
+	next();
+});
+
 //Getting movie information
 app.get("/info/:id", function(req, res){
 	var user = req.getUser();

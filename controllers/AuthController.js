@@ -20,10 +20,16 @@ module.exports = {
 						}
 						res.redirect("/movie/mood");
 					}else{
-						req.flash("danger", "Incorrect Password");
+						req.flash("danger", "Invalid email or password - please try again");
 						res.redirect("login");
 					}
-				});
+				}).catch(function(error){
+					if(error && Array.isArray(error.errors)){
+						error.errors.forEach(function(errorItem){
+							req.flash('danger', errorItem.message);
+						})
+					}
+				})
 			}else{
 				req.flash('danger', 'Unknown user.');
 				res.redirect("login");
@@ -53,7 +59,7 @@ module.exports = {
 			}
 			
 		}).catch(function(error){
-			res.flash("danger", "ERROR");
+			req.flash("danger", "ERROR");
 			res.redirect('signup')
 		})
 	},

@@ -4,7 +4,7 @@
 	<h2><a href="/movie/happy?page=<%= parseInt(page) - 1 %>" class="btn btn-primary"><span class="glyphicon glyphicon-backward" aria-hidden="true"></span></a> Happy <a href="/movie/happy?page=<%= parseInt(page) + 1 %>" class="btn btn-primary"><span class="glyphicon glyphicon-forward" aria-hidden="true"></span></a></h2>
 	<hr>
 	<% data.map(function(info){%>
-	<li class="posters"><a href="/info/<%=info.id%>"><img src="http://image.tmdb.org/t/p/w500/<%= info.poster_path%>"></a></li>
+	<li class="posters"><a href="/info/<%=info.id%>"><img src="http://image.tmdb.org/t/p/w300/<%= info.poster_path%>"></a></li>
 	<% }) %>
 </div>
 <br><br>

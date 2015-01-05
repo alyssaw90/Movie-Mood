@@ -123,12 +123,7 @@ nav {
 	font-size: 20px;
 }
 
-.favoriteListItem {
-	list-style: none;
-	font-family: 'Roboto', sans-serif;
-	font-size: 20px;
-}
-
+/* Favorite button*/
 #favoriteButton {
 	background-color: #c0392b;
 	border-color: #c0392b;
@@ -139,6 +134,14 @@ nav {
   text-decoration: none;
 }
 
+/* Favorite list page */
+.favoriteListItem {
+	list-style: none;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+}
+
+/* Contact page */
 #contactPicture{
 	height: 200px;
 	width: 200px;
