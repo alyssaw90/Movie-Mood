@@ -23,13 +23,14 @@ module.exports = {
 						req.flash("danger", "Invalid email or password - please try again");
 						res.redirect("login");
 					}
-				}).catch(function(error){
-					if(error && Array.isArray(error.errors)){
-						error.errors.forEach(function(errorItem){
-							req.flash('danger', errorItem.message);
-						})
-					}
 				})
+				// .catch(function(error){
+				// 	if(error && Array.isArray(error.errors)){
+				// 		error.errors.forEach(function(errorItem){
+				// 			req.flash('danger', errorItem.message);
+				// 		})
+				// 	}
+				// })
 			}else{
 				req.flash('danger', 'Unknown user.');
 				res.redirect("login");
@@ -44,7 +45,7 @@ module.exports = {
 	post_signup:function(req,res){
 		var user = req.getUser()
 		db.user.findOrCreate({
-			where: {email: req.body.email}, 
+			where: {email: req.body.email},
 			defaults:{email:req.body.email,password:req.body.password,name:req.body.name}
 		}).spread(function(user, created){
 			if(user){
@@ -57,7 +58,7 @@ module.exports = {
 			}else{
 				req.flash("danger", "Enter valid password")
 			}
-			
+
 		}).catch(function(error){
 			if(error && Array.isArray(error.errors)){
 				error.errors.forEach(function(errorItem){
