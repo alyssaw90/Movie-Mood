@@ -48,12 +48,6 @@ app.get("*", function(req, res, next){
 	next();
 });
 
-// //404 page handling
-// app.use(function(res, res, next){
-// 	res.send(404, "Sorry can't find that!");
-// 	next();
-// });
-
 //Getting movie information
 app.get("/info/:id", function(req, res){
 	var user = req.getUser();
@@ -82,7 +76,10 @@ app.delete("/favorite/:id", function(req, res){
 	})
 });
 
-
+//404 error page
+// app.use(function(req, res){
+// 	res.render("error");
+// });
 
 
  app.listen(process.env.PORT || 3000);

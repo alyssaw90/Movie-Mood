@@ -6,7 +6,7 @@ h1 {
 }
 
 h2 {
-	font-family: 'Roboto', sans-serif; 
+	font-family: 'Roboto', sans-serif;
 }
 
 /* Signup and login page */
@@ -23,10 +23,19 @@ h2 {
 .login,
 .signup {
 	font-family: 'Roboto', sans-serif;
+  background-color: transparent;
+  border-color: white;
+  border: solid 2px;
 }
 
 body {
 	background-color: #95a5a6;
+}
+
+.homepage {
+  background-image: url(article-lights_camera_action.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 
@@ -62,10 +71,10 @@ nav {
 }
 
 /* Mood buttons */
-#romance, 
-#happy, 
+#romance,
+#happy,
 #adventure,
-#indie, 
+#indie,
 #family,
 #drama {
   font-family: 'Roboto', sans-serif;
@@ -149,6 +158,6 @@ nav {
 }
 
 p {
-	font-family: 'Roboto', sans-serif; 
+	font-family: 'Roboto', sans-serif;
 	font-size: 20px;
 }
