@@ -9,6 +9,15 @@ h2 {
 	font-family: 'Roboto', sans-serif;
 }
 
+.gap {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.home-title {
+  font-size: 150px;
+}
+
 /* Signup and login page */
 .panel-body {
 	font-family: 'Roboto', sans-serif;
@@ -26,6 +35,12 @@ h2 {
   background-color: transparent;
   border-color: white;
   border: solid 2px;
+}
+
+.about {
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 body {
