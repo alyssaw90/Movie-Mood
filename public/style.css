@@ -65,6 +65,31 @@ nav {
 	background-size: contain;
 }
 
+.happy-image {
+  height: 50px;
+  width: 50px;
+}
+.drama-image {
+  height: 50px;
+  width: 50px;
+}
+.adventure-image {
+  height: 50px;
+  width: 50px;
+}
+.romance-image {
+  height: 50px;
+  width: 50px;
+}
+.family-image {
+  height: 50px;
+  width: 50px;
+}
+.indie-image {
+  height: 50px;
+  width: 50px;
+}
+
 .watchlist {
 	font-family: 'Roboto', sans-serif;
 	background: #c0392b;
