@@ -61,8 +61,7 @@ body {
 
 /* Navigation bar styling */
 nav {
-	background-image: url(movies.jpg);
-	background-size: contain;
+	background-color: black;
 }
 
 .happy-image {
@@ -89,30 +88,19 @@ nav {
   height: 50px;
   width: 50px;
 }
-
-.watchlist {
-	font-family: 'Roboto', sans-serif;
-	background: #c0392b;
-	border-color: #c0392b;
-}
-
-.watchlist:hover {
-  background: #ea6153;
-  text-decoration: none;
-}
-
-.moodDropdown {
-	font-family: 'Roboto', sans-serif;
-}
-
-.logoutButton {
-	font-family: 'Roboto', sans-serif;
-}
-
 .username{
 	font-family: 'Roboto', sans-serif;
 	font-size: 15px;
 	color: white;
+}
+.nav-title {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  font-size: 25px;
+}
+.link{
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
 }
 
 /* Mood buttons */
