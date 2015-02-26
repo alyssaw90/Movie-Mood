@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Moodflix</title>
-	<link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.1/yeti/bootstrap.min.css" rel="stylesheet">	
+	<link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.1/yeti/bootstrap.min.css" rel="stylesheet">
 	<link href='//fonts.googleapis.com/css?family=Roboto+Slab|Roboto:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="/style.css">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -11,9 +11,16 @@
 </head>
 <body>
 	<nav class="navbar navbar-default" role="navigation">
-		<div class="text-center">
-			<h1>Moodflix</h1>
-		</div>
+	<div class="container-fluid">
+	<div class="navbar-header">
+	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <h1><a class="navbar-brand" href="/movie/mood">Moodflix</a></h1>
+	</div>
 		<div class="navbar-right">
 			<a href="#" class="moodDropdown dropdown-toggle btn btn-primary" data-toggle="dropdown" role="button" aria-expanded="false">Moods <span class="caret"></span></a>
 			<ul class="dropdown-menu" role="menu">
@@ -28,10 +35,11 @@
 			<a href="/favorite/list" class="watchlist btn btn-primary"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>Favorites</a>
 			<a href="/auth/logout" class="logoutButton btn btn-primary">Logout</a>
 		</div>
-		<div class="navbar-left">
+		<div class="navbar-right">
 			<% if(user) { %>
 			<b class="username"> Hello, <%= typeof user.name === 'string' ? user.name : 'Unknown' %>!</b>
 			<% } %>
+		</div>
 		</div>
 	</nav>
 
