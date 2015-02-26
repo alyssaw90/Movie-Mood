@@ -11,37 +11,52 @@
 </head>
 <body>
 	<nav class="navbar navbar-default" role="navigation">
-	<div class="container-fluid">
-	<div class="navbar-header">
-	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <h1><a class="navbar-brand" href="/movie/mood">Moodflix</a></h1>
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/movie/mood">Moodflix</a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href="/favorite/list">Favorites</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Moods <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="/movie/mood">All Moods</a></li>
+							<li><a href="/movie/happy">Happy</a></li>
+							<li><a href="/movie/drama">Dramatic</a></li>
+							<li><a href="/movie/adventure">Adventerous</a></li>
+							<li><a href="/movie/indie">Indie</a></li>
+							<li><a href="/movie/romance">Romantic</a></li>
+							<li><a href="/movie/family">Family</a></li>
+						</ul>
+					</li>
+				</ul>
+      <!-- <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form> -->
+      <ul class="nav navbar-nav navbar-right">
+      	<li class="dropdown">
+      		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">		<% if(user) { %>
+      			<b class="username"> Hello, <%= typeof user.name === 'string' ? user.name : 'Unknown' %>!</b>
+      			<% } %>
+      		<span class="caret"></span></a>
+      			<ul class="dropdown-menu" role="menu">
+      				<li><a href="/auth/logout" >Logout</a></li>
+      			</ul>
+      		</li>
+      	</ul>
+      </div>
 	</div>
-		<div class="navbar-right">
-			<a href="#" class="moodDropdown dropdown-toggle btn btn-primary" data-toggle="dropdown" role="button" aria-expanded="false">Moods <span class="caret"></span></a>
-			<ul class="dropdown-menu" role="menu">
-				<li><a href="/movie/mood">All Moods</a></li>
-				<li><a href="/movie/happy">Happy</a></li>
-				<li><a href="/movie/drama">Dramatic</a></li>
-				<li><a href="/movie/adventure">Adventerous</a></li>
-				<li><a href="/movie/indie">Indie</a></li>
-				<li><a href="/movie/romance">Romantic</a></li>
-				<li><a href="/movie/family">Family</a></li>
-			</ul>
-			<a href="/favorite/list" class="watchlist btn btn-primary"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>Favorites</a>
-			<a href="/auth/logout" class="logoutButton btn btn-primary">Logout</a>
-		</div>
-		<div class="navbar-right">
-			<% if(user) { %>
-			<b class="username"> Hello, <%= typeof user.name === 'string' ? user.name : 'Unknown' %>!</b>
-			<% } %>
-		</div>
-		</div>
-	</nav>
+</nav>
 
 
 <% include alerts %>
