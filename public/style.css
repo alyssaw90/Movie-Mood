@@ -36,6 +36,7 @@ h2 {
   border: solid 2px;
 }
 .about {
+  font-family: 'Roboto', sans-serif;
   color: white;
   padding-left: 20px;
   padding-right: 20px;
