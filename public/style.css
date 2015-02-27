@@ -41,8 +41,9 @@ h2 {
   padding-left: 20px;
   padding-right: 20px;
 }
-body {
-	background-color: #95a5a6;
+body{
+  background-image: url(starring.png);
+  background-repeat:repeat;
 }
 .homepage {
   background-image: url(article-lights_camera_action.jpg);
@@ -69,7 +70,11 @@ nav {
   font-size: 14px;
 }
 
-/* Mood buttons */
+/* Mood page and buttons*/
+.mood-heading {
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+}
 .box {
   background-color: #c0392b;
   border-color: #c0392b;
@@ -85,6 +90,9 @@ nav {
   height: 50px;
   width: 50px;
 }
+.adventure-image{
+  width: 75px;
+}
 .box:hover {
   background: #ea6153;
   border-color: #c0392b;
@@ -95,11 +103,20 @@ nav {
 }
 
 /* Movie information page */
+.movieInfo-header {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
 .infoTitle,
 .infoLink,
 .infoPoster {
 	font-family: 'Roboto', sans-serif;
+  color: white;
 	font-size: 15px;
+}
+.movieTitle {
+  font-family: 'Roboto', sans-serif;
+  color: white;
 }
 .infoLink {
 	font-size: 20px;

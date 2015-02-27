@@ -1,11 +1,11 @@
 <% include partials/header.ejs %>
 
 <div class="container">
-	<h2 class="text-center">Movie Information</h2>
+	<h2 class="text-center movieInfo-header">Movie Information</h2>
 	<hr>
 	<br><br>
 	<div class="col-md-8">
-		<h3>
+		<h3 class="movieTitle">
 			<%= info.title%>
 			<button class="addButton btn btn-primary" id="favoriteButton" type="submit" data-title="<%=info.title%>" data-movieId="<%=info.id%>" data-userId="<%=user.id%>"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span></button>
 		</h3>
