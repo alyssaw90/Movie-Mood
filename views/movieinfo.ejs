@@ -4,7 +4,7 @@
 	<h2 class="text-center">Movie Information</h2>
 	<hr>
 	<br><br>
-	<div class="col-md-6">
+	<div class="col-md-8">
 		<h3>
 			<%= info.title%>
 			<button class="addButton btn btn-primary" id="favoriteButton" type="submit" data-title="<%=info.title%>" data-movieId="<%=info.id%>" data-userId="<%=user.id%>"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span></button>
@@ -12,7 +12,7 @@
 		<p class="infoTitle"><%= info.overview%></p>
 		<p class="infoLink"><a href="http://www.themoviedb.org/movie/<%=info.id%>">Where to watch this at?</a></p>
 	</div>
-	<div class="col-md-6">
+	<div class="col-md-4">
 		<p class="infoPoster"><img src="http://image.tmdb.org/t/p/w300/<%= info.poster_path%>"></p>
 	</div>
 </div>
