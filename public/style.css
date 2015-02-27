@@ -4,21 +4,13 @@ h1 {
 	font-weight: 700;
 	color: white;
 }
-
 h2 {
 	font-family: 'Roboto', sans-serif;
 }
-
 .gap {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-
-/*.gap1 {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}*/
-
 .home-title {
   font-size: 150px;
 }
@@ -29,11 +21,9 @@ h2 {
 	font-weight: 400;
 	font-size: 30px;
 }
-
 .center {
 	text-align: center;
 }
-
 .login,
 .signup {
 	font-family: 'Roboto', sans-serif;
@@ -41,52 +31,23 @@ h2 {
   border-color: white;
   border: solid 2px;
 }
-
 .about {
   color: white;
   padding-left: 20px;
   padding-right: 20px;
 }
-
 body {
 	background-color: #95a5a6;
 }
-
 .homepage {
   background-image: url(article-lights_camera_action.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-
 /* Navigation bar styling */
 nav {
 	background-color: black;
-}
-
-.happy-image {
-  height: 50px;
-  width: 50px;
-}
-.drama-image {
-  height: 50px;
-  width: 50px;
-}
-.adventure-image {
-  height: 50px;
-  width: 50px;
-}
-.romance-image {
-  height: 50px;
-  width: 50px;
-}
-.family-image {
-  height: 50px;
-  width: 50px;
-}
-.indie-image {
-  height: 50px;
-  width: 50px;
 }
 .username{
 	font-family: 'Roboto', sans-serif;
@@ -104,51 +65,26 @@ nav {
 }
 
 /* Mood buttons */
-#romance,
-#happy,
-#adventure,
-#indie,
-#family,
-#drama {
+.box {
+  background-color: #c0392b;
+  border-color: #c0392b;
+}
+#mood {
   font-family: 'Roboto', sans-serif;
   color: #ffffff;
-  border-color: #c0392b;
   font-size: 20px;
-  background: #c0392b;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
 }
-
-#romance:hover {
+.mood-image {
+  height: 50px;
+  width: 50px;
+}
+.box:hover {
   background: #ea6153;
+  border-color: #c0392b;
   text-decoration: none;
 }
-
-#happy:hover {
-  background: #ea6153;
-  text-decoration: none;
-}
-
-#adventure:hover {
-  background: #ea6153;
-  text-decoration: none;
-}
-
-#indie:hover {
-  background: #ea6153;
-  text-decoration: none;
-}
-
-#family:hover {
-  background: #ea6153;
-  text-decoration: none;
-}
-
-#drama:hover {
-  background: #ea6153;
-  text-decoration: none;
-}
-
 .posters {
 	display: inline-block;
 }
@@ -160,7 +96,6 @@ nav {
 	font-family: 'Roboto', sans-serif;
 	font-size: 15px;
 }
-
 .infoLink {
 	font-size: 20px;
 }
@@ -170,7 +105,6 @@ nav {
 	background-color: #c0392b;
 	border-color: #c0392b;
 }
-
 #favoriteButton:hover {
   background: #ea6153;
   text-decoration: none;
@@ -189,7 +123,6 @@ nav {
 	width: 200px;
 	border-radius: 50% 50%;
 }
-
 p {
 	font-family: 'Roboto', sans-serif;
 	font-size: 20px;
