@@ -26,7 +26,7 @@ app.use(flash());
 
 var moods = {
 	"happy": 35,
-	"adventure": 12, 
+	"adventure": 12,
 	"drama": 18,
 	"suspense": 10748,
 	"romance": 10749,
@@ -52,7 +52,7 @@ app.get("*", function(req, res, next){
 app.get("/info/:id", function(req, res){
 	var user = req.getUser();
 	var id = req.params.id;
-	var url = "http://api.themoviedb.org/3/movie/"+id+"?api_key=" + process.env.moviedata; 
+	var url = "http://api.themoviedb.org/3/movie/"+id+"?api_key=" + process.env.moviedata;
 	request(url, function(error, response, body){
 		// console.log(response.statusCode)
 		if (response.statusCode == 200) {
@@ -76,9 +76,18 @@ app.delete("/favorite/:id", function(req, res){
 	})
 });
 
-//404 error page
+// 404 error page
 // app.use(function(req, res){
-// 	res.render("error");
+// 	res.status(404);
+// 	if (req.accepts('html')){
+// 		res.render('404', {url: req.url});
+// 		return;
+// 	}
+// 	if (req.accepts('json')){
+// 		res.send({error: 'Not found'});
+// 		return;
+// 	}
+// 	res.type('text').send('Not found');
 // });
 
 
